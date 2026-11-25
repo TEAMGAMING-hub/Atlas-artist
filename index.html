@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Atlas musical interactif présentant des artistes internationaux." />
+    <title>Atlas des artistes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="brand" href="#"><span class="brand-mark">A</span> ATLAS</a>
+        <a class="nav-link" href="#artists">Artistes</a>
+      </nav>
+      <div class="hero-copy">
+        <p class="eyebrow">Cartographie musicale</p>
+        <h1>Rencontrez les voix<br />qui façonnent le monde.</h1>
+        <p class="intro">Explorez des artistes, leurs origines et leurs univers.</p>
+      </div>
+    </header>
+
+    <main id="artists">
+      <section class="toolbar" aria-label="Filtres">
+        <label class="search-wrap">
+          <span>Rechercher</span>
+          <input id="search" type="search" placeholder="Nom ou pays" autocomplete="off" />
+        </label>
+        <label>
+          <span>Pays</span>
+          <select id="country"><option value="">Tous</option></select>
+        </label>
+      </section>
+      <p id="status" class="status" role="status">Chargement des artistes…</p>
+      <section id="grid" class="grid" aria-live="polite"></section>
+    </main>
+
+    <footer><span>Atlas musical</span><span>Sources : Wikipédia, Wikimedia, sites officiels</span></footer>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
